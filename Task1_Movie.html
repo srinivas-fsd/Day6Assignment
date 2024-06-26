@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title> 
+            Movie Class
+        </title>
+    </head>
+    <body>
+        <p align = "center">
+           <h2> Movie Class with Constructor, Properties and Methods </h2>
+           <h3> Please check "Console" for the output</h3>
+        </p>
+        <script>
+            class Movie 
+            {
+
+                // a) & b)  constructor for the class Movie with default rating property "PG"
+                constructor(title,studio,rating="PG")
+                {
+                    this.title  = title ;
+                    this.studio = studio;
+                    this.rating = rating;
+                }
+
+                // c)  getPG() method to display only PG movies list
+
+                getPG(ratingList)
+                {
+                    let resultArray = [];
+                    for(let i=0;i<ratingList.length;i++)
+                    {
+                        if(ratingList[i].rating.toLowerCase()=="pg")
+                        {
+                            resultArray.push(ratingList[i].title);
+                        }
+                    }
+                    
+                    return resultArray;     
+                }
+            }
+
+            let movie1 = new Movie("Gladiator","FoxStar","Rated R");
+            let movie2 = new Movie("Matrix","Warner Bros","PG13");
+            let movie3 = new Movie("Lion King","Disney","PG");
+
+            //Creating object with default value for rating proprty
+
+            let movie4 = new Movie("PeterPan","Universal");
+
+            let movieArray = [];
+
+            movieArray.push(movie1,movie2,movie3,movie4);
+
+            console.log("Overall Movies List : ",movieArray);
+
+            let pGMovies = [];
+            let resultObj = new Movie();
+
+            pGMovies = resultObj.getPG(movieArray);
+
+            console.log("Movies with PG rating : ");
+
+            for(let i=0;i<pGMovies.length;i++)
+            {
+                console.log(pGMovies[i]);
+            }
+
+
+            //d) code to create aninstance of the class Movie with the title “Casino Royale”, the studio “Eon Productions”, and the rating “PG­13”
+            let movie5 = new Movie("Casino Royale","Eon Productions","PG­13");
+            console.log("Movie object created for given values in subtask d) :")
+            console.log("Title  : ",movie5.title);
+            console.log("Studio : ",movie5.studio);
+            console.log("Rating : ",movie5.rating);
+
+        </script>
+    </body>
+</html>

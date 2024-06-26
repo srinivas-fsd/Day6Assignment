@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title> 
+            UberPrice Class
+        </title>
+    </head>
+    <body>
+        <p align = "center">
+           <h2> UberPrice Class with Constructor,Properties and Methods </h2>
+           <h3> Please check "Console" for the output</h3>
+        </p>
+        <script>
+            class UberPrice 
+            {
+                constructor(pickUpLocation,dropLocation,ratePerKM,totalTravelled_KM)
+                {
+                    this.pickUpLocation = pickUpLocation;
+                    this.dropLocation = dropLocation ;
+                    this.ratePerKM = ratePerKM;
+                    this.totalTravelled_KM = totalTravelled_KM ;
+                }
+
+                calculatePrice(totalKM)
+                {
+                    return this.ratePerKM * totalKM ;
+                }
+            }
+
+            let up1 = new UberPrice("TNagar","CMBT",15,10);
+            
+            console.log("            Price details of the uber journey : ");
+
+            console.log("Pickup Location  : ",up1.pickUpLocation);
+            console.log("Drop   Location  : ",up1.dropLocation);
+            console.log("Rate Per Kilometer   : ",up1.ratePerKM);
+            console.log("Total Kilometer Travelled : ",up1.totalTravelled_KM);
+            console.log("Total Price  : ",up1.calculatePrice(up1.totalTravelled_KM));
+
+        </script>
+    </body>
+</html>

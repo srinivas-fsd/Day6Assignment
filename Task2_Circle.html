@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title> 
+            Circle Class
+        </title>
+    </head>
+    <body>
+        <p align = "center">
+           <h2> Circle Class with Constructor, Properties and Methods </h2>
+           <h3> Please check "Console" for the output</h3>
+        </p>
+        <script>
+            class Circle 
+            {
+
+                constructor(radius,color)
+                {
+                    this.radius = radius.toFixed(1);
+                    this.color  = color;
+                }
+
+                setRadius(radius)
+                {
+                    this.radius = radius;
+                }
+
+                getRadius()
+                {
+                    return this.radius;
+                }
+                
+                setColor(color)
+                {
+                    this.color = color;
+                }
+
+                getColor()
+                {
+                    return this.color;
+                }
+
+                getArea(radius)
+                {
+                    return (Math.PI * radius * radius).toFixed(2);
+                }
+
+                getCircumference(radius)
+                {
+                    return (2 * Math.PI * radius).toFixed(2);
+                }
+               
+            }
+
+            
+            let c1 = new Circle(1.0,"red");
+            console.log("radius and color values passed to constructor  and object created :",c1);
+
+            c1.setRadius(c1.radius);
+            c1.setColor(c1.color);
+
+            console.log("Circle class has been set with following values : ")
+
+            console.log("Color  : ", c1.getColor());
+            console.log("Radius : ", c1.getRadius());
+            console.log("Area   : ",c1.getArea( c1.getRadius() ));
+            console.log("circumference   : ",c1.getCircumference( c1.getRadius() ));
+
+
+
+        </script>
+    </body>
+</html>

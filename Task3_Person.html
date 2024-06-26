@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title> 
+            Person Class
+        </title>
+    </head>
+    <body>
+        <p align = "center">
+           <h2> Person Class with Properties and Methods </h2>
+           <h3> Please check "Console" for the output</h3>
+        </p>
+        <script>
+            class Person 
+            {
+
+                setPersonDetails(name,age,place)
+                {
+                    this.name  = name ;
+                    this.age   = age;
+                    this.place = place;
+                }
+
+                getName()
+                {
+                    return this.name;
+                }
+
+                getAge()
+                {
+                    return this.age;
+                }
+
+                getPlace()
+                {
+                    return this.place;
+                }
+            
+            }
+
+            let p1 = new Person();
+            p1.setPersonDetails("Sachin",51,"Mumbai");
+
+            console.log("Person details : ");
+
+            console.log("Name  : ",p1.getName());
+            console.log("Age   : ",p1.getAge());
+            console.log("Place : ",p1.getPlace());
+
+        </script>
+    </body>
+</html>
